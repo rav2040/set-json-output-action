@@ -7,6 +7,9 @@ inputs:
   cmd:
     description: "Should be a command that returns serialised JSON as output."
     required: true
+  working-directory:
+    description: "The directory to run the command in."
+    required: false
 runs:
   using: "node16"
   main: "lib/main.js"
