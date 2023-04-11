@@ -6,7 +6,7 @@ async function main() {
     try {
         const name = getInput("name", { required: true });
         const cmd = getInput("cmd", { required: true });
-        const workingDirectory = getInput("working-directory") || "./tf/applications/ubiquity";
+        const workingDirectory = getInput("working-directory");
         const [file, ...args] = cmd.split(/\s/g).filter(Boolean);
         const output = execFileSync(file, args, {
             cwd: join(process.cwd(), workingDirectory),
