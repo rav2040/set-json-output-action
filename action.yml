@@ -1,0 +1,12 @@
+name: "Set JSON output"
+description: "Easily set an output value to serialised JSON."
+inputs:
+  name:
+    description: "THe output name."
+    required: true
+  cmd:
+    description: "Should be a command that returns serialised JSON as output."
+    required: true
+runs:
+  using: "node16"
+  main: "lib/main.js"
