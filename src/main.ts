@@ -7,7 +7,6 @@ async function main() {
         const cmd = getInput("cmd");
         const [file, ...args] = cmd.split(/\s+/g);
         const output = execFileSync(file, args, { encoding: "utf8" });
-        console.log(output);
         setOutput(name, output);
     } catch (err) {
         if (err instanceof Error) setFailed(err);
